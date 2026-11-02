@@ -55,7 +55,7 @@ body {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #dce2db;
-  font-size: 13px;
+  font-size: 0.9rem;
 }
 .top a {
   color: inherit;
@@ -80,13 +80,13 @@ main {
   padding: 58px 0 38px;
 }
 .eyebrow {
-  font-size: 11px;
+  font-size: 0.86rem;
   font-weight: 800;
   letter-spacing: 1.8px;
   color: #57736e;
 }
 h1 {
-  font-size: clamp(35px, 4.5vw, 65px);
+  font-size: clamp(1.6667rem, 4.5vw, 3.0952rem);
   line-height: 1.07;
   letter-spacing: -2.4px;
   margin: 17px 0 22px;
@@ -97,7 +97,7 @@ h1 em {
 }
 .intro {
   max-width: 650px;
-  font-size: 17px;
+  font-size: 1rem;
   line-height: 1.7;
   color: #526966;
 }
@@ -116,7 +116,7 @@ h1 em {
   background: #fffdfa;
   border: 1px solid #bacfc1;
   border-radius: 30px;
-  font-size: 12px;
+  font-size: 0.9rem;
   font-weight: 800;
   letter-spacing: 2px;
 }
@@ -162,7 +162,7 @@ h1 em {
 .controls label {
   display: block;
   margin: 18px 0 9px;
-  font-size: 13px;
+  font-size: 0.9rem;
   font-weight: 700;
 }
 select {
@@ -183,7 +183,7 @@ select {
   width: auto;
 }
 .muted {
-  font-size: 13px;
+  font-size: 0.9rem;
   color: #617770;
   line-height: 1.65;
 }
@@ -216,7 +216,7 @@ button:disabled {
 }
 .actions button {
   padding: 8px 10px;
-  font-size: 12px;
+  font-size: 0.9rem;
 }
 hr {
   border: 0;
@@ -228,7 +228,7 @@ hr {
   border: 1px solid #ccdcc9;
   border-radius: 10px;
   padding: 15px 18px;
-  font-size: 13px;
+  font-size: 0.9rem;
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -246,17 +246,17 @@ hr {
 }
 .metrics b {
   display: block;
-  font-size: 29px;
+  font-size: 1.381rem;
   color: #0a776d;
 }
 .metrics span {
   display: block;
-  font-size: 11px;
+  font-size: 0.86rem;
   color: #6c7c72;
   margin-top: 5px;
 }
 h2 {
-  font-size: 18px;
+  font-size: 1rem;
   letter-spacing: -0.4px;
   margin: 0 0 14px;
 }
@@ -268,7 +268,7 @@ h2 {
   flex-wrap: wrap;
 }
 .section-head label {
-  font-size: 12px;
+  font-size: 0.9rem;
   display: flex;
   align-items: center;
   gap: 9px;
@@ -278,13 +278,13 @@ h2 {
 }
 .tag {
   font-family: monospace;
-  font-size: 11px;
+  font-size: 0.86rem;
   background: #eef1e9;
   padding: 7px;
   border-radius: 5px;
 }
 .progress {
-  font-size: 12px;
+  font-size: 0.9rem;
   border-left: 3px solid #e29251;
   background: #faf2e6;
   padding: 11px 14px;
@@ -293,7 +293,7 @@ h2 {
   max-height: 350px;
   overflow: auto;
   line-height: 1.6;
-  font-size: 14px;
+  font-size: 0.95rem;
 }
 .conversation p {
   padding: 12px;
@@ -309,7 +309,7 @@ details {
   padding: 13px 0;
 }
 summary {
-  font-size: 12px;
+  font-size: 0.9rem;
   cursor: pointer;
   line-height: 1.6;
 }
@@ -321,7 +321,7 @@ pre {
   color: #d9eee2;
   border-radius: 8px;
   padding: 15px;
-  font-size: 12px;
+  font-size: 0.9rem;
   line-height: 1.7;
   max-height: 460px;
   overflow: auto;
@@ -332,7 +332,7 @@ pre {
   padding-top: 10px;
 }
 .outcome > p:last-child {
-  font-size: 15px;
+  font-size: 0.95rem;
   line-height: 1.7;
   white-space: pre-wrap;
 }
@@ -341,7 +341,7 @@ pre {
   overflow: auto;
 }
 .events details p {
-  font-size: 13px;
+  font-size: 0.9rem;
   color: #526b61;
 }
 .guide-grid {
@@ -351,7 +351,7 @@ pre {
 }
 .guide-grid .panel {
   line-height: 1.7;
-  font-size: 14px;
+  font-size: 0.95rem;
   margin: 0;
 }
 .guide-grid {
@@ -367,15 +367,15 @@ pre {
 .quiz-wrap legend {
   padding: 0 8px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 0.95rem;
 }
 .quiz-wrap label {
-  font-size: 14px;
+  font-size: 0.95rem;
   margin: 12px 0;
 }
 footer {
   padding: 35px 0;
-  font-size: 12px;
+  font-size: 0.9rem;
   color: #6b7d70;
 }
 [hidden] {
@@ -412,7 +412,7 @@ legend {
     gap: 18px;
   }
   .tabs button {
-    font-size: 12px;
+    font-size: 0.9rem;
   }
   .panel {
     padding: 19px;
@@ -424,7 +424,7 @@ legend {
   }
   .top {
     padding: 0 5%;
-    font-size: 11px;
+    font-size: 0.86rem;
   }
   .brand {
     letter-spacing: 1px;
@@ -433,7 +433,7 @@ legend {
     padding: 12px;
   }
   .metrics span {
-    font-size: 10px;
+    font-size: 0.86rem;
   }
   .metrics {
     gap: 7px;
@@ -463,12 +463,12 @@ legend {
   padding-top: 18px;
 }
 .inspect-grid p {
-  font-size: 13px;
+  font-size: 0.9rem;
   line-height: 1.7;
   overflow-wrap: anywhere;
 }
 #outcome {
-  font-size: 15px;
+  font-size: 0.95rem;
   line-height: 1.8;
   white-space: pre-wrap;
 }
@@ -485,13 +485,13 @@ legend {
   white-space: normal;
 }
 .metrics b {
-  font-size: 21px;
+  font-size: 1.05rem;
   overflow-wrap: anywhere;
 }
 .events p {
   border-top: 1px solid #dce4d7;
   padding: 12px 0;
-  font-size: 12px;
+  font-size: 0.9rem;
   line-height: 1.7;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
@@ -508,7 +508,7 @@ legend {
     grid-template-columns: 1fr;
   }
   .metrics b {
-    font-size: 17px;
+    font-size: 1rem;
   }
   .metrics > div {
     min-width: 0;
@@ -520,6 +520,6 @@ legend {
     gap: 14px;
   }
   .tabs button {
-    font-size: 11px;
+    font-size: 0.86rem;
   }
 }

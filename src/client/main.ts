@@ -1,4 +1,6 @@
 import './style.css';
+import './course-theme.css';
+import './course-theme.js';
 import { VERSION, GUIDE, QUIZ, summary, clean, type Start, type Status } from '../shared/model.js';
 import { connectBrowser, type BrowserSession } from './browser.js';
 import { dialogHandler } from './dialog.js';

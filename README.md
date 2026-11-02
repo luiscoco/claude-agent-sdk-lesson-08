@@ -17,7 +17,7 @@ npm run dev
 
 Open **http://127.0.0.1:4381**. Practice mode works immediately without credentials or model calls. The interface also includes a host-responsibility guide, four-question knowledge check, and downloadable observations.
 
-![Browser Session Lab](docs/session-lab.png)
+![Refreshed course interface with larger text](docs/visual-refresh-desktop.png)
 
 ## Try the core exercise
 
@@ -149,3 +149,5 @@ See [live verification](docs/live-verification.md) for separately observed real 
 - [Official browser/computer toolset guide](https://platform.claude.com/docs/en/agents-and-tools/tool-use/browser-use-sdk): host driver responsibilities. These API toolsets are a separate surface from the Agent SDK browser transport demonstrated here.
 
 MIT license. Public student repository; instructor credentials are not included.
+
+See [visual style and reading controls](docs/visual-style.md) for the refreshed reference palette, larger typography, and persistent text-size setting.
