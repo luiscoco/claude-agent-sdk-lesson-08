@@ -5,6 +5,7 @@ import { VERSION, GUIDE, QUIZ, summary, clean, type Start, type Status } from '.
 import { connectBrowser, type BrowserSession } from './browser.js';
 import { dialogHandler } from './dialog.js';
 import { inspectFrame } from './driver.js';
+import { observeCode } from './highlight.js';
 import { renderMarkdown } from './markdown.js';
 const $ = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
 document.querySelector('#app')!.innerHTML =
@@ -14,7 +15,7 @@ document.querySelector('#app')!.innerHTML =
 <section id="dialog" class="panel dialog" role="dialog" aria-label="Local teaching page review" aria-modal="false" hidden></section>
 <section class="panel"><div class="section-head"><h2>Session outcome</h2><span id="provenance" class="tag">No worker selected</span></div><div id="outcome">Awaiting a result message.</div><p id="dialog-status" class="muted">No dialog observed.</p><div class="inspect-grid"><article><p class="eyebrow">ACCUMULATED USAGE</p><p id="usage">Not inspected.</p></article><article><p class="eyebrow">CONTEXT SNAPSHOT</p><p id="context">Not inspected.</p></article></div><p class="muted">Inspect sends control requests and can reopen suspended delivery. Usage and context are separate observations. Practice values are synthetic.</p></section>
 <section class="panel"><div class="section-head"><h2>Delivered message audit</h2><span id="drops" class="tag">No drop counts</span></div><p class="muted">The host status poll above continues independently of SSE. Durable messages catch up after reconnect; ephemeral updates sent while suspended are lost. Latest 100 received messages retained.</p><div id="events" class="events"></div></section></div></div></section>
-<section id="guide" class="view" hidden><div class="guide-grid">${GUIDE.map(([title, text]) => `<article class="panel"><p class="eyebrow">HOST CONTRACT</p><h2>${title}</h2><p>${text}</p></article>`).join('')}</div><article class="panel"><h2>The concrete browser API</h2><pre>import { query, suspendSseStream, resumeSseStream }
+<section id="guide" class="view" hidden><div class="guide-grid">${GUIDE.map(([title, text]) => `<article class="panel"><p class="eyebrow">HOST CONTRACT</p><h2>${title}</h2><p>${text}</p></article>`).join('')}</div><article class="panel"><h2>The concrete browser API</h2><pre data-lang="ts">import { query, suspendSseStream, resumeSseStream }
   from '@anthropic-ai/claude-agent-sdk/browser';
 
 const q = query({
@@ -30,6 +31,7 @@ resumeSseStream(q);
 await q.getContextUsage({ detail: 'summary' });
 await q.usage_EXPERIMENTAL_MAY_CHANGE_DO_NOT_RELY_ON_THIS_API_YET();</pre><p>The source guide uses conceptual shorthand. The pinned SDK requires a transport and async iterable prompt, and its usage API is explicitly experimental. The local bridge implements only initialize, one fixed task, the teaching dialog, usage, context and cleanup. It is not an Anthropic hosted-session service.</p></article></section>
 <section id="quiz" class="view" hidden><div class="quiz-wrap"><p class="eyebrow">CHECK YOUR MENTAL MODEL</p><h2>Can you explain what kept running?</h2>${QUIZ.map((q, i) => `<fieldset class="panel"><legend>${i + 1}. ${q.question}</legend>${q.answers.map((a, j) => `<label class="check"><input type="radio" name="q${i}" value="${j}">${a}</label>`).join('')}</fieldset>`).join('')}<button id="grade" class="primary">Check answers</button><p id="score" role="status"></p></div></section><footer>Browser Session Lab · Lesson 8 · Host the interaction. Observe the evidence.</footer></main>`;
+observeCode();
 let epoch = 0;
 let session: BrowserSession | undefined,
   id = '',
