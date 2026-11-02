@@ -1,4 +1,4 @@
-# Lesson 8 — Browser Session Lab
+# Lesson 8 Browser Session Lab
 
 An interactive companion to **Claude Agent SDK TypeScript 0.3.310**, Lesson 8: **Browser SDK and Observability**.
 
